@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Carretera Austral – Presentación</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #0f172a;
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)),
+                  url('images/carretera1.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 1.35rem;
+      max-width: 640px;
+      opacity: 0.95;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* Secciones */
+    section {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 0;
+    }
+
+    section:nth-child(even) {
+      direction: rtl;
+    }
+
+    section:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    .section-image {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .section-content {
+      padding: 4rem 3.5rem;
+      background: #f8fafc;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .section-content h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .section-content p {
+      font-size: 1.15rem;
+      color: #334155;
+      margin-bottom: 1.5rem;
+      max-width: 520px;
+    }
+
+    .section-content ul {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .section-content li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.6rem;
+      color: #475569;
+    }
+
+    .section-content li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #0ea5e9;
+      font-weight: 700;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #0ea5e9;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer strong {
+      color: #e2e8f0;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      section {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      section:nth-child(even) {
+        direction: ltr;
+      }
+
+      .section-image {
+        height: 50vh;
+        min-height: 320px;
+      }
+
+      .section-content {
+        height: auto;
+        padding: 3rem 1.75rem;
+      }
+
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Portada -->
+  <header class="hero">
+    <h1>La Carretera Austral</h1>
+    <p>La ruta más espectacular de la Patagonia chilena.<br>1.240 km de pureza, naturaleza y aventura.</p>
+    <div class="scroll-hint">↓ Desplázate para explorar</div>
+  </header>
+
+  <!-- 2. ¿Qué es? -->
+  <section>
+    <div class="section-image" style="background-image: url('images/carretera2.jpg');"></div>
+    <div class="section-content">
+      <span class="badge">INTRODUCCIÓN</span>
+      <h2>La Ruta Austral</h2>
+      <p>
+        Oficialmente conocida como Ruta CH-7, la Carretera Austral es una de las vías más impresionantes del mundo. 
+        Une Puerto Montt con Villa O’Higgins a lo largo de más de 1.240 kilómetros a través de la Patagonia chilena.
+      </p>
+      <p>
+        Construida principalmente durante la dictadura de Pinochet y finalizada en gran parte en las décadas siguientes, 
+        esta carretera atraviesa fiordos, glaciares, bosques milenarios y pueblos remotos.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. Paisajes -->
+  <section>
+    <div class="section-image" style="background-image: url('images/carretera3.jpg');"></div>
+    <div class="section-content">
+      <span class="badge">NATURALEZA</span>
+      <h2>Paisajes de otro mundo</h2>
+      <p>
+        La Carretera Austral es un museo al aire libre de la geología y la biodiversidad patagónica.
+      </p>
+      <ul>
+        <li>Glaciares colgantes y campos de hielo</li>
+        <li>Bosques templados lluviosos de alerce y coigüe</li>
+        <li>Lagos de un azul imposible (General Carrera, Yelcho…)</li>
+        <li>Fiordos profundos y cascadas eternas</li>
+        <li>Parques nacionales como Queulat, Cerro Castillo y Patagonia</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Pueblos y destinos -->
+  <section>
+    <div class="section-image" style="background-image: url('images/carretera4.jpg');"></div>
+    <div class="section-content">
+      <span class="badge">DESTINOS</span>
+      <h2>Pueblos con alma</h2>
+      <p>
+        A lo largo del camino aparecen pequeñas localidades que parecen detenidas en el tiempo:
+      </p>
+      <ul>
+        <li><strong>Hornopirén</strong> – puerta de entrada y ferry a Caleta Gonzalo</li>
+        <li><strong>Chaitén</strong> – renacida tras la erupción del volcán</li>
+        <li><strong>Puyuhuapi</strong> – aguas termales y fiordo</li>
+        <li><strong>Coyhaique</strong> – capital de la región de Aysén</li>
+        <li><strong>Chile Chico</strong> – microclima mediterráneo junto al lago General Carrera</li>
+        <li><strong>Villa O’Higgins</strong> – el fin del camino</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. Viaje y consejos -->
+  <section>
+    <div class="section-image" style="background-image: url('images/carretera5.jpg');"></div>
+    <div class="section-content">
+      <span class="badge">CÓMO RECORRERLA</span>
+      <h2>Consejos para el viaje</h2>
+      <p>
+        La Carretera Austral se disfruta mejor con tiempo, paciencia y espíritu de aventura.
+      </p>
+      <ul>
+        <li>Mejor época: noviembre a marzo (verano austral)</li>
+        <li>Vehículo 4×4 recomendado (muchos tramos de ripio)</li>
+        <li>Combina ferry + carretera (especialmente el tramo norte)</li>
+        <li>Lleva combustible de reserva y comida</li>
+        <li>Reserva alojamientos con anticipación en temporada alta</li>
+        <li>Respeta la naturaleza: lleva tu basura y no molestes a la fauna</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <strong>La Carretera Austral</strong> · Chile · Patagonia<br>
+      Una de las últimas grandes aventuras del planeta.
+    </p>
+  </footer>
+
+</body>
+</html>
